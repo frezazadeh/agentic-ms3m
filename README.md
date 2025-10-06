@@ -211,10 +211,10 @@ Adapters live in `src/ms3m/models/baselines_ext.py`. Two ways to enable a model:
 If you use this repository, please cite the paper:
 ```bibtex
 @misc{{ms3m},
-  title        = {{Rivaling Transformers: Agentic Multi-Scale Structured State-Space Mixtures for 6G O-RAN}},
-  author       = {{Pegah}},
+  title        = {{Rivaling Transformers: Multi-Scale Structured State-Space Mixtures for Agentic 6G O-RAN}},
+  author       = {{Farhad Rezazadeh, ...}},
   year         = {{2025}},
-  url          = {{https://github.com/BrainOmega/ms3m}}
+  url          = {{}}
 }
 ```
 
