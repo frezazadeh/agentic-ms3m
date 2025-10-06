@@ -1,5 +1,5 @@
 
-# Rivaling Transformers: Agentic Multi‑Scale Structured State‑Space Mixtures for 6G O‑RAN (MS³M)
+# Rivaling Transformers: Multi‑Scale Structured State‑Space Mixtures for Agentic 6G O‑RAN (MS³M)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](#-installation)
