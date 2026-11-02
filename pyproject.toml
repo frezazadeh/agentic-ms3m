@@ -10,4 +10,6 @@ description = "Multi-Scale Structured State-Space Mixtures (MS3M) for Agentic 6G
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [{name = "BrainOmega (Farhad Rezazadeh)"}]
+license = {file = "LICENSE"}
+classifiers = ["License :: Other/Proprietary License"]
 dependencies = ["torch>=2.2","numpy>=1.24","scipy>=1.10","matplotlib>=3.7"]

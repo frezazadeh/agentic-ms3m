@@ -63,3 +63,14 @@ tests/                     checks of the properties claimed in the paper
 Results come from one single-UE testbed and an offline replay.  The unseen-run evaluation tests
 recordings that were never seen in training, but all recordings come from the same UE, so the results
 do not establish generalization to unseen UEs or closed-loop performance in a RIC.
+
+## License
+
+This software is released under the [PolyForm Noncommercial License 1.0.0](LICENSE).
+You may use, modify and share it for noncommercial purposes, such as research, teaching,
+personal study and use by educational or public research institutions.
+
+**Commercial use is not permitted without prior written permission.**  For a commercial
+license, contact Farhad Rezazadeh (farhad.rezazadeh@upc.edu).
+
+If you use this code, please cite the paper (see `CITATION.cff`).
