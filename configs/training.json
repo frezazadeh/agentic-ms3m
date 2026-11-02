@@ -1,0 +1,28 @@
+{
+ "batch_size": 256,
+ "max_epochs": 60,
+ "lr": 0.002,
+ "weight_decay": 0.0001,
+ "patience": 20,
+ "clip": 1.0,
+ "plateau_factor": 0.5,
+ "plateau_patience": 2,
+ "seeds": [
+  42,
+  17,
+  73
+ ],
+ "split": {
+  "train": 0.7,
+  "val": 0.15,
+  "test": 0.15,
+  "order": "chronological"
+ },
+ "channel_isolated": [
+  "patchtst"
+ ],
+ "loss": {
+  "default": "mse",
+  "tft": "pinball (0.1, 0.5, 0.9); point forecast = median"
+ }
+}

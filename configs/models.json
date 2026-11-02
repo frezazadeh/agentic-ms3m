@@ -1,0 +1,94 @@
+{
+ "ms3m": {
+  "d_model": 128,
+  "n_layers": 4,
+  "state_dim": 64,
+  "n_components": 4,
+  "dropout": 0.1,
+  "dt_init": 0.1
+ },
+ "patchtst": {
+  "d_model": 128,
+  "n_heads": 16,
+  "n_layers": 3,
+  "d_ff": 256,
+  "patch_len": 16,
+  "stride": 8,
+  "dropout": 0.2
+ },
+ "itransformer": {
+  "d_model": 128,
+  "n_heads": 8,
+  "n_layers": 4,
+  "d_ff_mult": 4,
+  "dropout": 0.1,
+  "use_token_embed": false
+ },
+ "fedformer": {
+  "d_model": 128,
+  "n_layers_enc": 3,
+  "n_layers_dec": 2,
+  "d_ff_mult": 4,
+  "modes": 32,
+  "ma_kernels": [
+   3,
+   5,
+   7,
+   11,
+   25
+  ],
+  "dropout": 0.1
+ },
+ "informer": {
+  "d_model": 128,
+  "n_heads": 8,
+  "n_layers_enc": 3,
+  "n_layers_dec": 2,
+  "d_ff_mult": 4,
+  "prob_c": 5.0,
+  "pe_type": "learned",
+  "distill": true,
+  "pred_len": 1,
+  "label_frac": 0.5,
+  "use_causal_mask": true,
+  "dropout": 0.1
+ },
+ "tft": {
+  "d_model": 128,
+  "d_hidden": 256,
+  "n_heads": 8,
+  "dropout": 0.1,
+  "dropout_att": 0.1,
+  "n_static": 0,
+  "quantiles": [
+   0.1,
+   0.5,
+   0.9
+  ]
+ },
+ "etsformer": {
+  "d_model": 128,
+  "n_layers": 3,
+  "d_ff_mult": 4,
+  "dropout": 0.1,
+  "dropout_att": 0.1,
+  "topk_freq": 8,
+  "max_lag": 16,
+  "use_es_baseline": true,
+  "alpha_init": 0.4,
+  "beta_init": 0.2
+ },
+ "crossformer": {
+  "d_model": 128,
+  "n_heads": 8,
+  "d_ff_mult": 4,
+  "patch_len": 16,
+  "stride": 8,
+  "n_routers": 8,
+  "n_layers_scale1": 2,
+  "n_layers_scale2": 1,
+  "merge_factor": 2,
+  "dropout": 0.1,
+  "dropout_att": 0.1
+ }
+}

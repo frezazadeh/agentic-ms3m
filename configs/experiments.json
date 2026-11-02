@@ -1,0 +1,145 @@
+{
+ "ablation": {
+  "anchor": {},
+  "state16": {
+   "state_dim": 16
+  },
+  "state32": {
+   "state_dim": 32
+  },
+  "mix1": {
+   "n_components": 1
+  },
+  "mix2": {
+   "n_components": 2
+  },
+  "kernel8": {
+   "kernel_len": 8
+  },
+  "kernel16": {
+   "kernel_len": 16
+  },
+  "window8": {
+   "_window": 8
+  },
+  "window16": {
+   "_window": 16
+  },
+  "se_causal": {
+   "se_mode": "causal"
+  },
+  "se_none": {
+   "se_mode": "none"
+  },
+  "mixer_mlp": {
+   "use_glu": false
+  },
+  "a_diag": {
+   "a_mode": "diag"
+  },
+  "dt_fixed": {
+   "learn_dt": false
+  },
+  "taps_reversed": {
+   "tap_order": "as_conv1d"
+  },
+  "stored_order": {
+   "_order": "as_stored",
+   "tap_order": "as_conv1d"
+  }
+ },
+ "ablation_seeds": [
+  42,
+  17
+ ],
+ "screening_training": {
+  "max_epochs": 30,
+  "patience": 10
+ },
+ "rolling": {
+  "f50": [
+   0.4,
+   0.5,
+   0.6
+  ],
+  "f70": [
+   0.6,
+   0.7,
+   0.8
+  ],
+  "f90": [
+   0.8,
+   0.9,
+   1.0
+  ]
+ },
+ "targets": [
+  "SINR",
+  "RSRQ"
+ ],
+ "tune_models": [
+  "patchtst",
+  "itransformer"
+ ],
+ "tune_grid": [
+  {
+   "lr": 0.0005,
+   "d_model": 64
+  },
+  {
+   "lr": 0.0005,
+   "d_model": 128
+  },
+  {
+   "lr": 0.001,
+   "d_model": 64
+  },
+  {
+   "lr": 0.001,
+   "d_model": 128
+  },
+  {
+   "lr": 0.002,
+   "d_model": 64
+  },
+  {
+   "lr": 0.002,
+   "d_model": 128
+  }
+ ],
+ "unseen": {
+  "u1": {
+   "test": [
+    0,
+    1
+   ],
+   "val": [
+    2
+   ]
+  },
+  "u2": {
+   "test": [
+    4,
+    5
+   ],
+   "val": [
+    3
+   ]
+  },
+  "u3": {
+   "test": [
+    8,
+    9
+   ],
+   "val": [
+    10
+   ]
+  }
+ },
+ "unseen_models": [
+  "ms3m",
+  "patchtst",
+  "itransformer",
+  "etsformer"
+ ]
+}

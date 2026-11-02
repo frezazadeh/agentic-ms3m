@@ -5,9 +5,9 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ms3m"
-version = "0.1.0"
+version = "0.2.0"
 description = "Multi-Scale Structured State-Space Mixtures (MS3M) for Agentic 6G O-RAN"
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [{name = "BrainOmega (Farhad Rezazadeh)"}]
-dependencies = ["torch>=2.2","einops>=0.7","tqdm>=4.66","numpy>=1.24"]
+dependencies = ["torch>=2.2","numpy>=1.24","scipy>=1.10","matplotlib>=3.7"]
