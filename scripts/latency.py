@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Per-request inference latency, measured the way a Near-RT xApp would see it.
 
-A request is one window of 32 x 13 samples, handled by one CPU thread: standardise, forward
-pass with batch size 1, inverse-standardise.  Run this on an otherwise idle machine.
+A request is one window of 32 x 13 samples, handled by one CPU thread.  The windows are
+standardised beforehand (not timed); the timed interval covers the forward pass with batch size 1
+and the inverse standardisation of the forecast.  Run this on an otherwise idle machine.
 Throughput over the test tail (batches of 256, data already in memory) is reported separately.
 """
 import argparse

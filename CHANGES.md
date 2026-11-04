@@ -60,6 +60,21 @@ deployment: `freeze_kernels()`.
 FEDformer, Informer, TFT, ETSformer and Crossformer are unmodified and reproduce the parameter counts
 of the notebook exactly.
 
+## How the baselines differ from the cited architectures
+
+All baselines are our own re-implementations, adapted to one-step forecasting of a scalar target from
+a 32-step window; they are not the official code of the cited papers.  Three differences matter for
+the comparison (see the paper, Section 4, "Implementation of the baselines"):
+
+- **Crossformer** (`models/crossformer.py`): encoder only, two layers at the segment scale and one after
+  merging, then an MLP head on the last segment token of each scale (averaged over the KPIs).  The
+  hierarchical decoder of the original is not implemented.  The cross-dimension stage runs before the
+  cross-time stage, segments overlap (length 16, stride 8) and are merged by averaging.
+- **Informer** (`models/informer.py`): the query sparsity measure is computed from the full score matrix
+  `Q K^T` instead of a sample of the keys, so attention costs O(L^2 d) per layer.  ProbSparse attention is
+  also used for the decoder cross-attention.
+- **FEDformer** (`models/fedformer.py`): Fourier enhanced blocks only; the wavelet variant is not implemented.
+
 ## Added for the revision
 
 - `data.run_bounds`, `data.make_group_split`, stage `unseen`: evaluation on recording runs held out from training.
